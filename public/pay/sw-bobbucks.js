@@ -50,7 +50,7 @@ self.addEventListener('message', listener = function(e) {
   }
 });
 
-function sendPaymentRequest() {
+function postMessageToClient(msg) {
   // Note that the returned window_client from openWindow is not used since
   // it might be changed by refreshing the opened page.
   // Refer to https://www.w3.org/TR/service-workers-1/#clients-getall
@@ -63,21 +63,29 @@ function sendPaymentRequest() {
       // Might do more communications or checks to make sure the message is
       // posted to the correct window only.
 
-      // Copy the relevant data from the paymentrequestevent to
-      // send to the payment app confirmation page.
-      // Note that the entire PaymentRequestEvent can not be passed through
-      // postMessage directly since it can not be cloned.
-      clientList[i].postMessage({
-        total: payment_request_event.total,
-        methodData: payment_request_event.methodData,
-      });
+      clientList[i].postMessage(msg);
     }
   });
 }
 
-function sendUpdateToMerchant() {
+function sendPaymentRequest() {
+  // Copy the relevant data from the paymentrequestevent to
+  // send to the payment app confirmation page.
+  // Note that the entire PaymentRequestEvent can not be passed through
+  // postMessage directly since it can not be cloned.
+  postMessageToClient({
+    total: payment_request_event.total,
+    methodData: payment_request_event.methodData,
+  });
+}
+
+async function sendUpdateToMerchant() {
   // TODO(smcgruer): Implement properly, this is just testing communication.
-  payment_request_event.changePaymentMethod("https://bobbucks.dev/pay");
+  const response = await payment_request_event.changePaymentMethod("https://bobbucks.dev/pay");
+
+  postMessageToClient({
+    updateWith: response.error,
+  });
 }
 
 function PromiseResolver() {

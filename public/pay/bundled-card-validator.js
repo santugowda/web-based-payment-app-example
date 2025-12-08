@@ -184,10 +184,15 @@ function requestUnmaskCard(card) {
 
 navigator.serviceWorker.addEventListener('message', e => {
   paymentRequestClient = e.source;
-  methodData = e.data["methodData"];
-  document.getElementById('details').innerHTML = JSON.stringify(e.data, undefined, 2);
 
-  populatePaymentInstrumentsList();
+  if (e.methodData) {
+    methodData = e.data["methodData"];
+    document.getElementById('details').innerHTML = JSON.stringify(e.data, undefined, 2);
+
+    populatePaymentInstrumentsList();
+  } else if (e.updateWith) {
+    document.getElementById('update-with-event-log').innertext = `Received update from merchant: ${e.updateWith}`;
+  }
 });
 navigator.serviceWorker.controller.postMessage('payment_app_window_ready');
 
