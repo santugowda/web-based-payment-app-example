@@ -191,7 +191,9 @@ navigator.serviceWorker.addEventListener('message', e => {
 
     populatePaymentInstrumentsList();
   } else if (e.data.updateWith) {
-    document.getElementById('update-with-event-log').innertext = `Received update from merchant: ${e.updateWith}`;
+    const log = document.getElementById('update-with-event-log')
+    log.innerHTML = `<b>Received update from merchant</b>: ${e.data.updateWith}`;
+    log.style.display = 'block';
   }
 });
 navigator.serviceWorker.controller.postMessage('payment_app_window_ready');
