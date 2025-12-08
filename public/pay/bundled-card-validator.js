@@ -185,12 +185,12 @@ function requestUnmaskCard(card) {
 navigator.serviceWorker.addEventListener('message', e => {
   paymentRequestClient = e.source;
 
-  if (e.methodData) {
+  if (e.data.methodData) {
     methodData = e.data["methodData"];
     document.getElementById('details').innerHTML = JSON.stringify(e.data, undefined, 2);
 
     populatePaymentInstrumentsList();
-  } else if (e.updateWith) {
+  } else if (e.data.updateWith) {
     document.getElementById('update-with-event-log').innertext = `Received update from merchant: ${e.updateWith}`;
   }
 });
