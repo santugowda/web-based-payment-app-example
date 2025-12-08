@@ -38,6 +38,11 @@ self.addEventListener('message', listener = function(e) {
     return;
   }
 
+  if (e.data == "update_for_merchant") {
+    sendUpdateToMerchant();
+    return;
+  }
+
   if(e.data.methodName) {
     payment_request_resolver.resolve(e.data);
   } else {
@@ -68,6 +73,11 @@ function sendPaymentRequest() {
       });
     }
   });
+}
+
+function sendUpdateToMerchant() {
+  // TODO(smcgruer): Implement properly, this is just testing communication.
+  payment_request_event.changePaymentMethod("https://bobbucks.dev/pay");
 }
 
 function PromiseResolver() {

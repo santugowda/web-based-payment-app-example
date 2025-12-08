@@ -44,6 +44,10 @@
       <h2>Choose how to pay with BobBucks</h2>
       <div class="list-group" id="payment-instrument-list">
       </div>
+      <div id="update-with-button">
+        <!-- TODO(smcgruer): JavaScript should add the onclick -->
+        <a href="#" class="btn btn-link" onclick="navigator.serviceWorker.controller.postMessage('update_for_merchant')">Send update event to Merchant</a>
+      </div>
       <div id="detailsContainer" class="collapse">
         <pre style="white-space: pre-wrap;" id="details"></pre>
       </div>
