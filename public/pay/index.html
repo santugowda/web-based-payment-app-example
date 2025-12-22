@@ -18,26 +18,7 @@
 
     <!-- Theme CSS -->
     <link href="/css/new-age.min.css" rel="stylesheet">
-    <style>
-      #content-container {
-        padding-bottom: 60px;
-      }
 
-      #footer .container {
-        height: 50px;
-        text-align: center;
-        padding-top: 7px;
-      }
-
-      .cc-icons {
-        display: inline-block;
-      }
-
-      .cc-numbers {
-        display: inline-block;
-        margin-left: 10px;
-      }
-    </style>
   </head>
   <body>
     <div class="container" id="content-container">
@@ -54,47 +35,7 @@
       </div>
     </div>
 
-    <!-- CVC unmask modal -->
-    <div class="modal fade" tabindex="-1" role="dialog" id="cvc-confirm-modal">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Enter this card's CVC</h4>
-          </div>
 
-          <div class="modal-body">
-            <input type="text" id="cvc-confirm-field"></input>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary" id="cvc-confirm-button">Pay</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <!-- Add Card Modal -->
-    <div class="modal fade" tabindex="-1" role="dialog" id="add-card-modal">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Add a credit card</h4>
-          </div>
-          <div class="modal-body">
-            <input type="text" id="full-name" placeholder="Full Name"></input>
-            <input type="text" id="cc-number" placeholder="4111 1111 1111 1111"></input>
-            <input type="month" id="exp-date"></input>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary" id="add-card-confirm-button" onclick="addCardConfirmed()">Confirm</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
 
     <div class="navbar navbar-default navbar-fixed-bottom" id="footer">
         <div class="container">
