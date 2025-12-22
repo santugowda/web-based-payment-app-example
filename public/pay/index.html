@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
-<!-- Custom Fonts -->
+    <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
@@ -18,7 +18,6 @@
 
     <!-- Theme CSS -->
     <link href="/css/new-age.min.css" rel="stylesheet">
-
   </head>
   <body>
     <div class="container" id="content-container">
@@ -26,8 +25,7 @@
       <div class="list-group" id="payment-instrument-list">
       </div>
       <div id="update-events">
-        <!-- TODO(smcgruer): JavaScript should add the onclick -->
-        <a href="#" id="update-with-button" class="btn btn-link" onclick="navigator.serviceWorker.controller.postMessage('update_for_merchant')">Send update event to Merchant</a>
+        <a href="#" id="update-with-button" class="btn btn-link">Send update event to Merchant</a>
         <div id="update-with-event-log" style="display: none;" class="alert alert-warning"></div>
       </div>
       <div id="detailsContainer" class="collapse">
