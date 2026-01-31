@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BobBucks Payment Method</title>
+    <link rel="payment-method-manifest" href="/web-based-payment-app-example/pay/payment-manifest.json">
+</head>
+<body>
+    <h1>Payment Method: BobBucks</h1>
+    <p>This is the payment method endpoint.</p>
+    <script>
+        // Redirect to the payment manifest
+        if (window.location.pathname.endsWith('/pay') || window.location.pathname.endsWith('/pay/')) {
+            window.location.href = '/web-based-payment-app-example/pay/payment-manifest.json';
+        }
+    </script>
+</body>
+</html>
