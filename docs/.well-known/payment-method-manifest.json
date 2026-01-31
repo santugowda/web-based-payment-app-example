@@ -1,0 +1,4 @@
+{
+  "default_applications": ["https://santugowda.github.io/web-based-payment-app-example/pay/manifest.json"],
+  "supported_origins": "*"
+}
