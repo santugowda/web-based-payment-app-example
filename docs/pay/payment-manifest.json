@@ -1,4 +1,4 @@
 {
- "default_applications": ["https://santugowda.github.io/web-based-payment-app-example/pay/manifest.json"],
- "supported_origins": ["https://santugowda.github.io", "https://rsolomakhin.github.io"]
+ "default_applications": ["https://web-based-payment-app-example.pages.dev/pay/manifest.json"],
+ "supported_origins": ["https://web-based-payment-app-example.pages.dev", "https://rsolomakhin.github.io"]
 }

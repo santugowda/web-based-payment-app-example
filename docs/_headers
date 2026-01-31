@@ -3,13 +3,13 @@
 [[headers]]
   for = "/pay"
   [headers.values]
-    Link = '''<https://YOUR_CLOUDFLARE_URL/pay/payment-manifest.json>; rel="payment-method-manifest"'''
+    Link = '''<https://web-based-payment-app-example.pages.dev/pay/payment-manifest.json>; rel="payment-method-manifest"'''
     Access-Control-Allow-Origin = "*"
 
 [[headers]]
   for = "/pay/"
   [headers.values]
-    Link = '''<https://YOUR_CLOUDFLARE_URL/pay/payment-manifest.json>; rel="payment-method-manifest"'''
+    Link = '''<https://web-based-payment-app-example.pages.dev/pay/payment-manifest.json>; rel="payment-method-manifest"'''
     Access-Control-Allow-Origin = "*"
 
 [[headers]]
