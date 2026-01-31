@@ -1,25 +1,15 @@
-# Cloudflare Pages Configuration
+/pay
+  Link: <https://web-based-payment-app-example.pages.dev/pay/payment-manifest.json>; rel="payment-method-manifest"
+  Access-Control-Allow-Origin: *
 
-[[headers]]
-  for = "/pay"
-  [headers.values]
-    Link = '''<https://web-based-payment-app-example.pages.dev/pay/payment-manifest.json>; rel="payment-method-manifest"'''
-    Access-Control-Allow-Origin = "*"
+/pay/
+  Link: <https://web-based-payment-app-example.pages.dev/pay/payment-manifest.json>; rel="payment-method-manifest"
+  Access-Control-Allow-Origin: *
 
-[[headers]]
-  for = "/pay/"
-  [headers.values]
-    Link = '''<https://web-based-payment-app-example.pages.dev/pay/payment-manifest.json>; rel="payment-method-manifest"'''
-    Access-Control-Allow-Origin = "*"
+/pay/payment-manifest.json
+  Access-Control-Allow-Origin: *
+  Content-Type: application/json
 
-[[headers]]
-  for = "/pay/payment-manifest.json"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Content-Type = "application/json"
-
-[[headers]]
-  for = "/pay/manifest.json"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Content-Type = "application/json"
+/pay/manifest.json
+  Access-Control-Allow-Origin: *
+  Content-Type: application/json
