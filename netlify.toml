@@ -1,4 +1,13 @@
+[build]
+  publish = "docs"
+  command = "echo 'No build needed - serving static files'"
+
 [[headers]]
   for = "/pay"
   [headers.values]
-    Link = '''<https://santugowda.github.io/web-based-payment-app-example/pay/payment-manifest.json>; rel="payment-method-manifest"'''
+    Link = '''<https://YOUR_NETLIFY_URL/pay/payment-manifest.json>; rel="payment-method-manifest"'''
+
+[[headers]]
+  for = "/pay/"
+  [headers.values]
+    Link = '''<https://YOUR_NETLIFY_URL/pay/payment-manifest.json>; rel="payment-method-manifest"'''
