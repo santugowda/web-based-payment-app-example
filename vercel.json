@@ -1,19 +1,13 @@
 {
-  "version": 2,
-  "public": true,
-  "builds": [
+  "headers": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "public"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/public/$1"
+      "source": "/pay",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://santugowda.github.io/web-based-payment-app-example/pay/payment-manifest.json>; rel=\"payment-method-manifest\""
+        }
+      ]
     }
   ]
 }

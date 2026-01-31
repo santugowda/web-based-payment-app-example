@@ -1,0 +1,4 @@
+[[headers]]
+  for = "/pay"
+  [headers.values]
+    Link = '''<https://santugowda.github.io/web-based-payment-app-example/pay/payment-manifest.json>; rel="payment-method-manifest"'''
