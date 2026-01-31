@@ -1,11 +1,22 @@
 {
+  "buildCommand": "echo 'No build needed'",
+  "outputDirectory": "docs",
   "headers": [
     {
       "source": "/pay",
       "headers": [
         {
           "key": "Link",
-          "value": "<https://santugowda.github.io/web-based-payment-app-example/pay/payment-manifest.json>; rel=\"payment-method-manifest\""
+          "value": "<https://YOUR_VERCEL_URL/pay/payment-manifest.json>; rel=\"payment-method-manifest\""
+        }
+      ]
+    },
+    {
+      "source": "/pay/",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://YOUR_VERCEL_URL/pay/payment-manifest.json>; rel=\"payment-method-manifest\""
         }
       ]
     }
