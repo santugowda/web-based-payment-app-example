@@ -1,0 +1,25 @@
+# Cloudflare Pages Configuration
+
+[[headers]]
+  for = "/pay"
+  [headers.values]
+    Link = '''<https://YOUR_CLOUDFLARE_URL/pay/payment-manifest.json>; rel="payment-method-manifest"'''
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/pay/"
+  [headers.values]
+    Link = '''<https://YOUR_CLOUDFLARE_URL/pay/payment-manifest.json>; rel="payment-method-manifest"'''
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/pay/payment-manifest.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "application/json"
+
+[[headers]]
+  for = "/pay/manifest.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "application/json"
