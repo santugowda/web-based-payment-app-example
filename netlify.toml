@@ -5,9 +5,9 @@
 [[headers]]
   for = "/pay"
   [headers.values]
-    Link = '''<https://YOUR_NETLIFY_URL/pay/payment-manifest.json>; rel="payment-method-manifest"'''
+    Link = '''<https://paymenthandler.netlify.app/pay/payment-manifest.json>; rel="payment-method-manifest"'''
 
 [[headers]]
   for = "/pay/"
   [headers.values]
-    Link = '''<https://YOUR_NETLIFY_URL/pay/payment-manifest.json>; rel="payment-method-manifest"'''
+    Link = '''<https://paymenthandler.netlify.app/pay/payment-manifest.json>; rel="payment-method-manifest"'''

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BobBucks Payment Test</title>
+    <title>BobBucks Payment Test - Native App</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -71,11 +71,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>🎉 BobBucks Payment Test</h1>
+        <h1>🎉 BobBucks Native App Test</h1>
         
         <div class="info">
             <strong>Payment Method:</strong><br>
-            https://santugowda.github.io/web-based-payment-app-example/pay
+            https://paymenthandler.netlify.app/pay
         </div>
 
         <button id="payButton">Invoke BobBucks Payment App</button>
@@ -89,7 +89,7 @@
         const checkButton = document.getElementById('checkButton');
         const resultDiv = document.getElementById('result');
 
-        const paymentMethod = 'https://santugowda.github.io/web-based-payment-app-example/pay';
+        const paymentMethod = 'https://paymenthandler.netlify.app/pay';
 
         async function checkPaymentApp() {
             try {
@@ -107,7 +107,7 @@
 
                 const canMakePayment = await request.canMakePayment();
                 showResult(
-                    `BobBucks is ${canMakePayment ? 'READY' : 'NOT READY'} to handle payments`,
+                    `BobBucks is ${canMakePayment ? 'READY ✅' : 'NOT READY ❌'} to handle payments`,
                     canMakePayment ? 'success' : 'error'
                 );
             } catch (error) {
